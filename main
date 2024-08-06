@@ -39,10 +39,6 @@ async def photo(ctx):
                 image_class, confidence_procent = get_class(image_path, MODEL_PATH, LABELS_PATH)
                 await temp_msg.delete()
                 print(f'It seems to me that with probability {confidence_procent}% in the photo {image_class}')
-                if image_class in good_habits:
-                    print("And this habit is a good habit, keep it up and don't get hooked on bad habits")
-                else:
-                    print('This habit is a bad habit, try replacing it with another healthier habit, such as cold showers, or self-development')
                 os.remove(image_path)
             else:
                 await ctx.send(f'Wrong file format {attachement.filename}, use .jpg, .jpeg or .png')

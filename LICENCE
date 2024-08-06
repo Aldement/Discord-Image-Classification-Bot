@@ -1,0 +1,4 @@
+In this repository there are no other files that should interact with the bot, 
+since you need to create the model yourself using the google teachable machine,
+where many of the created classes will be located, so if anything happens, 
+the code won’t just work without the others files.
